@@ -8,9 +8,10 @@ def uppercase(str):
     Args:
         str (str): the string to print in uppercase.
     """
+    ustr = ""
     for c in str:
-        if ord(c) >= ord('a') and ord(c) <= ord('z'):
-            print("{}".format(chr(ord(c) - 32)), end="")
+        if ord(c) >= 97 and ord(c) <= 122:
+            ustr += chr(ord(c) - 32)
         else:
-            print("{}".format(c), end="")
-    print()
+            ustr += c
+    print("{}".format(ustr))
